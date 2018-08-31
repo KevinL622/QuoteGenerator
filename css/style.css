@@ -1,0 +1,136 @@
+body{
+  background-image:
+  url('https://media.giphy.com/media/xT0xeJpnrWC4XWblEk/giphy.gif');
+  background-repeat: no-repeat;
+  background-size: 100% 100vh;
+  font: italic 1.2em "Fira Sans", serif;
+  position: relative;
+}
+
+h1 {
+  font: italic 60px "Fira Sans", serif;
+  text-align: center;
+  margin-top: 10%;
+  color: white;
+}
+
+.buttons {
+    text-align: center;
+    margin-top: 5%;
+    margin-right: 3%;
+}
+
+#quote-box{
+  text-align: center;
+}
+
+#new-quote{
+  border-radius: 20px;
+  width: 40%;
+  color: white;
+  background: #55ACEE;
+  font: italic 1.2em "Fira Sans", serif;
+  margin-bottom: 1%;
+  outline: none;
+  border: none;
+}
+
+#new-quote:hover{
+  background: crimson;
+  color: white;
+  opacity: .8;
+  cursor: pointer;
+}
+
+.fa {
+    padding: 10px;
+    width: 30px;
+    text-align: center;
+    text-decoration: none;
+    margin-top: 2%;
+    border-radius: 20px;
+}
+
+.fa-twitter {
+    background: #55ACEE;
+    color: white;
+}
+
+.fa-twitter:hover{
+    background: crimson;
+    color: white;
+}
+
+#textBox {
+  text-align: center;
+  font-size: 35px;
+  color: white;
+  margin-top: 10px;
+  margin-left: 20%;
+  margin-right: 20%;
+  background-color: rgba(75, 75, 75, .7);
+  border-radius: 20px;
+  padding: 10px;
+}
+
+#text:empty {
+  background-color: transparent;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  right: 1%;
+}
+
+@media only screen and (max-width: 600px) {
+  body{
+  background-image:
+  url('https://media.giphy.com/media/xT0xeJpnrWC4XWblEk/giphy.gif');
+  background-repeat: no-repeat;
+  background-size: 100% 100vh;
+  font: italic 1em "Fira Sans", serif;
+  position: relative;
+  }
+  
+  h1 {
+    font-size: 50px;
+  }
+  
+  #textBox {
+    width: 300px;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  
+  #text {
+  text-align: center;
+  font-size: 1em;
+  color: white;
+  margin-top: 10px;
+  margin-left: 0%;
+  margin-right: 0%;
+  margin-top: 5%;
+  }
+  
+  .buttons {
+    display: block;
+  }
+  
+  #new-quote{
+  border-radius: 20px;
+  width: 200px;
+  background: white;
+  font: italic 1em "Fira Sans", serif;
+  margin-right: 0%;
+  margin-left: 3%;
+  }
+  
+  .fa {
+    padding: 5px;
+    width: 20px;
+    text-align: center;
+    text-decoration: none;
+    margin-top: 1vh;
+  }
+}

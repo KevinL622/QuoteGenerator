@@ -1,0 +1,154 @@
+const quoteList = { "quotes": [
+  {
+      "quote": "If God exists, why are there ugly people in the world?",
+      "author": "Derek Zoolander"
+    },
+  {
+      "quote": "Sometimes cucumber taste better pickeled.",
+      "author": "Dave Chappelle"
+    },
+  {
+      "quote": "Jesus wept.",
+      "author": "The Bible"
+    },
+  {
+      "quote": "The inner machinations of my mind are an enigma.",
+      "author": "Patrick"
+    },
+  {
+      "quote": "What killed the dinosaurs...? THE ICE AGE!",
+      "author": "Arnold Schwarzeneggar as Mr. Freeze in THE MEGA SUPER SUMMER MOVIE BLOCKBUSTER SMASH HIT: Batman and Robin"
+    },
+  {
+      "quote": "Hyou loose.",
+      "author": "Mickey Rourke"
+    },
+  {
+      "quote": "Be assertive NOT INSERTIVE!",
+      "author": "Plankton"
+    },
+  {
+      "quote": "Cool party.",
+      "author": "Arnold Scharzenneggar as Mr. Freeze in THE MEGA SUPER SUMMER MOVIE BLOCKBUSTER SMASH HIT: Batman and Robin"
+    },
+  {
+      "quote": "You miss a hundred percent of the shots you don't take.",
+      "author": "An Alcoholic"
+    },
+  {
+      "quote": "Nothing means nothing.",
+      "author": "The Macho Man Randy Savage"
+    },
+  {
+      "quote": "If everybody love each other, the world would be a better place.",
+      "author": "Tommy Wiseau"
+    },
+  {
+      "quote": "Well that's just like your opinion, man.",
+      "author": "Jeff Bridges"
+    },
+  {
+      "quote": "I don't want no trouble",
+      "author": "Jackie Chan"
+    },
+  {
+      "quote": "Remember, licking doorknobs can be illegal on other planets.",
+      "author": "SpongeBob"
+    },
+  {
+      "quote": "FINLAND!",
+      "author": "Patrick"
+    },
+  {
+      "quote": "I said she was the bomb!",
+      "author": "Chris Tucker"
+    },
+  {
+      "quote":"They're breakdance fighting!",
+      "author": "Mugatu"
+    },
+  {
+      "quote":"Ocelot.",
+      "author": "Ashley Schaeffer"
+    },
+  {
+      "quote":"Please clap.",
+      "author": "Jeb Bush"
+    },
+  {
+      "quote":"I'm talking about a place called Aspen.",
+      "author": "Jim Carrey"
+    },
+  {
+      "quote":"You're not sending me to the cooler.",
+      "author": "Arnold Schwarzeneggar as Mr. Freeze in THE MEGA SUPER SUMMER MOVIE BLOCKBUSTER SMASH HIT: Batman and Robin"
+    }
+]
+};
+
+function getQuote() {
+  var randomNumber = Math.floor(Math.random() * quoteList.quotes.length);
+  var randomQuote = quoteList.quotes[randomNumber].quote;
+  var randomAuthor = quoteList.quotes[randomNumber].author;
+  document.getElementById('text').innerHTML = '\"' + randomQuote + '\"';
+  document.getElementById('author').innerHTML = '-' + randomAuthor;
+  var tweetQuote = randomQuote.split(' ').join('%20');
+  tweetQuote = tweetQuote.split('<br>').join('');
+  tweetQuote = "https://twitter.com/intent/tweet?text=" + tweetQuote.split('\"').join('"');
+  $('.twitter').attr('href', tweetQuote + ' -' + randomAuthor);
+  }
+
+//React Component for Random Quote Generator Free Code Camp Project
+class Title extends React.Component {
+    render() {
+        return (
+            <div>
+                <h1 className="title">
+                    The Best Quotes Generator
+                </h1>
+                <hr />
+                </div>);
+            }
+        };
+ReactDOM.render(<Title />, document.getElementById('title'));           
+
+
+class QuoteBox extends React.Component {
+    render() {
+        return (
+                <div id="textBox">
+                    <div id="text" className="quoteDisplay">
+                        {/* quote will display here */}
+                    </div>
+                    <div id="author" className="quoteDisplay">
+                        {/* author will display here */}
+                    </div>
+                </div>
+        );
+    }
+};           
+
+ReactDOM.render(<QuoteBox />, document.getElementById('content'))
+
+class Twitter extends React.Component {
+    render() {
+        return (
+            <a id="tweet-quote" className="twitter" href="https://twitter.com/intent/tweet?text=" data-size="large" target="_blank">
+                <i className="fa fa-twitter"></i>
+                </a>
+        );
+    }
+};
+
+ReactDOM.render(<Twitter />, document.getElementById('twitter'))
+                                 
+
+$(document).ready(function() {
+  getQuote();
+});
+ 
+
+
+
+
+
