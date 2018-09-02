@@ -26,11 +26,11 @@ h1 {
 
 #new-quote{
   border-radius: 20px;
-  width: 40%;
   color: white;
   background: #55ACEE;
   font: italic 1.2em "Fira Sans", serif;
   margin-bottom: 1%;
+  padding: 20px;
   outline: none;
   border: none;
 }
@@ -63,74 +63,34 @@ h1 {
 
 #textBox {
   text-align: center;
-  font-size: 35px;
+  font-size: 2rem;
   color: white;
   margin-top: 10px;
   margin-left: 20%;
   margin-right: 20%;
   background-color: rgba(75, 75, 75, .7);
   border-radius: 20px;
-  padding: 10px;
 }
 
 #text:empty {
   background-color: transparent;
 }
 
+#text{
+    text-align: left;
+    padding-top: 5px;
+    padding-left: 15px;
+}
+
 footer {
   position: fixed;
   bottom: 0;
-  right: 1%;
+  right: 0;
 }
 
-@media only screen and (max-width: 600px) {
-  body{
-  background-image:
-  url('https://media.giphy.com/media/xT0xeJpnrWC4XWblEk/giphy.gif');
-  background-repeat: no-repeat;
-  background-size: 100% 100vh;
-  font: italic 1em "Fira Sans", serif;
-  position: relative;
-  }
-  
-  h1 {
-    font-size: 50px;
-  }
-  
-  #textBox {
-    width: 300px;
-    margin-left: 0;
-    margin-right: 0;
-  }
-  
-  #text {
-  text-align: center;
-  font-size: 1em;
-  color: white;
-  margin-top: 10px;
-  margin-left: 0%;
-  margin-right: 0%;
-  margin-top: 5%;
-  }
-  
-  .buttons {
-    display: block;
-  }
-  
-  #new-quote{
-  border-radius: 20px;
-  width: 200px;
-  background: white;
-  font: italic 1em "Fira Sans", serif;
-  margin-right: 0%;
-  margin-left: 3%;
-  }
-  
-  .fa {
-    padding: 5px;
-    width: 20px;
-    text-align: center;
-    text-decoration: none;
-    margin-top: 1vh;
-  }
+@media only screen and (max-width: 400px){
+    #textBox {
+        margin-left: 0;
+        margin-right: 0;
+    }
 }
